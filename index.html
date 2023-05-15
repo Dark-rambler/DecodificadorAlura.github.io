@@ -38,6 +38,8 @@
           id="entrada"
           cols="30"
           rows="10"
+          oninput="this.value = this.value.toLowerCase()"
+          onkeypress="return /^[a-zA-Z0-9]+$/.test(event.key)"
         ></textarea>
         <div id="anuncio">
           <svg
@@ -53,7 +55,7 @@
             />
           </svg>
 
-          <p id="nota">solo letras minusculas y sin acento</p>
+          <p id="nota">solo letras minúsculas y sin acento</p>
         </div>
         <div id="botonesEncriptar">
           <button id="azulButton" class="boton">Encriptar</button>
@@ -63,7 +65,7 @@
       <article id="derecho">
         <div id="output">
           <img src="./Muñeco.png" alt="" />
-          <h2>Ningun mensaje fue encontrado</h2>
+          <h2>Ningún mensaje fue encontrado</h2>
           <p>Ingresa el el texto que deseas encriptar o desencriptar.</p>
         </div>
         <button id="copiar" class="invisible">
